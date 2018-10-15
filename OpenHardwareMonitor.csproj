@@ -132,6 +132,7 @@
     <Compile Include="GUI\UpdateVisitor.cs" />
     <Compile Include="GUI\UserOption.cs" />
     <Compile Include="GUI\UserRadioGroup.cs" />
+    <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyVersion.cs" />
     <Compile Include="Properties.Designer.cs">
       <AutoGen>True</AutoGen>

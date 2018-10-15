@@ -6,6 +6,8 @@ using System.IO.Ports;
 using System.IO;
 using System.Windows.Forms;
 
+#pragma warning disable CS0168 // Переменная объявлена, но не используется
+
 namespace OpenHardwareMonitor.Utilities
 {
     public class Serial
@@ -44,8 +46,9 @@ namespace OpenHardwareMonitor.Utilities
             {
                 serial.Open();
             }
-            catch (IOException e)
-            {
+
+			catch (IOException e)
+			{
                 return false;
             }
 

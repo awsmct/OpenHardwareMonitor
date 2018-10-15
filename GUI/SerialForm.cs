@@ -175,7 +175,26 @@ namespace OpenHardwareMonitor.GUI
         {
 
         }
-    }
+
+		private void label17_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void SelectType(object sender, EventArgs e)
+		{
+			InitializeComponent();
+			if (comboBox1.SelectedText == "Arduino")
+			{
+				Properties.Default.BaudRate = 9600;
+				SaveAndSend();
+			}
+			else
+			{
+				Properties.Default.BaudRate = 115200;
+			}
+		}
+	}
 
     #endregion
 

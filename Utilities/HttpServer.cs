@@ -210,10 +210,10 @@ namespace OpenHardwareMonitor.Utilities {
       nodeCount = 1;
       JSON += GenerateJSON(root);
       JSON += "]";
-      //JSON += ", \"Min\": \"Min\"";
+      JSON += ", \"Min\": \"Min\"";
       JSON += ", \"Value\": \"Value\"";
-      //JSON += ", \"Max\": \"Max\"";
-      //JSON += ", \"ImageURL\": \"\"";
+      JSON += ", \"Max\": \"Max\"";
+      JSON += ", \"ImageURL\": \"\"";
       JSON += "}";
 
       var responseContent = JSON;
@@ -246,27 +246,27 @@ namespace OpenHardwareMonitor.Utilities {
       JSON += "]";
 
       if (n is SensorNode) {
-        //JSON += ", \"Min\": \"" + ((SensorNode)n).Min + "\"";
+        JSON += ", \"Min\": \"" + ((SensorNode)n).Min + "\"";
         JSON += ", \"Value\": \"" + ((SensorNode)n).Value + "\"";
-        //JSON += ", \"Max\": \"" + ((SensorNode)n).Max + "\"";
-        //JSON += ", \"ImageURL\": \"images/transparent.png\"";
+        JSON += ", \"Max\": \"" + ((SensorNode)n).Max + "\"";
+        JSON += ", \"ImageURL\": \"images/transparent.png\"";
       } else if (n is HardwareNode) {
-        //JSON += ", \"Min\": \"\"";
+        JSON += ", \"Min\": \"\"";
         JSON += ", \"Value\": \"\"";
-        //JSON += ", \"Max\": \"\"";
-        //JSON += ", \"ImageURL\": \"images_icon/" + 
-          //GetHardwareImageFile((HardwareNode)n) + "\"";
+        JSON += ", \"Max\": \"\"";
+        JSON += ", \"ImageURL\": \"images_icon/" + 
+          GetHardwareImageFile((HardwareNode)n) + "\"";
       } else if (n is TypeNode) {
-        //JSON += ", \"Min\": \"\"";
+        JSON += ", \"Min\": \"\"";
         JSON += ", \"Value\": \"\"";
-        //JSON += ", \"Max\": \"\"";
-        //JSON += ", \"ImageURL\": \"images_icon/" + 
-          //GetTypeImageFile((TypeNode)n) + "\"";
+        JSON += ", \"Max\": \"\"";
+        JSON += ", \"ImageURL\": \"images_icon/" + 
+          GetTypeImageFile((TypeNode)n) + "\"";
       } else {
-        //JSON += ", \"Min\": \"\"";
+        JSON += ", \"Min\": \"\"";
         JSON += ", \"Value\": \"\"";
-        //JSON += ", \"Max\": \"\"";
-        //JSON += ", \"ImageURL\": \"images_icon/computer.png\"";
+        JSON += ", \"Max\": \"\"";
+        JSON += ", \"ImageURL\": \"images_icon/computer.png\"";
       }
 
       JSON += "}";
